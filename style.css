@@ -1,0 +1,154 @@
+:root{
+    --main-bg-color:hsl(240, 37%, 70%);
+    --card-bg-color: hsl(30, 21%, 93%);
+    --paragraph-color:hsl(228, 12%, 40%);
+    --solar-color:hsl(212, 21%, 14%);
+    --component-color:hsl(158 36% 37%);
+    --hover-component-color:rgb(89, 116, 106);
+    --external-link-color:hsl(228, 45%, 44%);
+    --cart-color:hsl(211, 13%, 65%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+}
+.main{
+    width: 100%;
+}
+
+.card{
+    min-width:600px;
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+}
+
+.left{
+    width:50%;
+    background-image: url(images/solar-panels-meadow.jpg);
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.right{
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 35px 40px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.group{
+    width: 100%;
+   
+}
+.item-category{
+    font-size: 9px;
+    color:var(--paragraph-color);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+h1{
+    width: 100%;
+    font-size: 26px;
+    color: var( --solar-color);
+}
+
+.description{
+    width:100%;
+    line-height: 1.5;
+    color:var(--paragraph-color);
+    font-size: 12px;
+    align-items: center;
+    word-spacing: .2em;
+    padding-top: 15px;
+    line-height: 1.5em;
+   
+}
+
+.price{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap:24px;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.price-update{
+    font-size: 25px; 
+    color:var(--paragraph-color);
+}
+
+.previous-price{
+    font-size: 14px;
+    text-decoration: line-through;
+    color: var(--cart-color);
+}
+
+button{
+    width: 100%;
+    padding: 17px 0;
+    margin:0 auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: ffff;
+    background-color:var(--cart-color);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+button:hover{
+    background-color: var(--hover-component-color);
+}
+button img{
+    margin-right: 7px;
+}
+
+@media only screen and (min-width:641px) and (max-width:768px){
+    .card{max-width: 600px;}
+}
+
+@media only screen and (max-width:640px){
+    .card{
+        min-width: auto;
+        width:90%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    .left{
+        width: 100%;
+        height: 350px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .right{
+        width: 100%;
+        row-gap: 12px;
+        padding: 25px;
+        border-bottom: 0 0 10px 10px;
+    }
+}
